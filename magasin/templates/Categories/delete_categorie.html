@@ -1,0 +1,15 @@
+{% extends 'magasin/base.html' %}
+{% block title %} Supprimer une Catégorie {% endblock %}
+
+{% block content %}
+  <div class="container mt-3">
+    <h2>Supprimer une Catégorie</h2>
+    <p>Êtes-vous sûr de vouloir supprimer cette Catégorie ?</p>
+    <p>{{ categorie.name }}</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Supprimer</button>
+      <a href="{% url 'ListCategorie' %}" class="btn btn-secondary">Annuler</a>
+    </form>
+  </div>
+{% endblock %}

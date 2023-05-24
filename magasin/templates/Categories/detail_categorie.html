@@ -1,0 +1,23 @@
+{% extends 'magasin/base.html' %}
+{% block title %} {{categorie.name}} {% endblock %}
+
+{% block content %}
+  <div class="card" style="width: 400px;margin: 10px; margin-left: 550px;" >
+   <div class="card-body">
+       <h5 class="card-title">Catégorie</h5>
+       
+        <p class="card-text">Nom: <b>{{categorie.name}}</b></p>
+       <a href="{% url 'ListCategorie' %}" class="btn btn-secondary">Retour au Catégories</a>
+   </div>
+</div>
+{% endblock %}
+{% block styles %}
+  <style>
+    body {
+      height: 1000px;
+      background-image: url('/static/images/background.jpg');
+      background-size: auto;
+      background-position: center ;
+    }
+  </style>
+{% endblock %}
